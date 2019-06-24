@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker build -t agung96tm/latihan2 -f Dockerfile.env .
+
+script:
+  - docker run agung96tm/latihan2 npm run test:unit
